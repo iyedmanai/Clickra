@@ -1,0 +1,437 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f8f8;
+}
+html {
+font-family: 'Inter', sans-serif;
+line-height: 1.5;
+scroll-behavior: smooth;
+}
+
+.container {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+    border-bottom: 1px solid #eaeaea;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-container {
+    max-width: 1200px;     /* same width as your main page */
+    margin: 0 auto;        /* centers the header content */
+    padding: 0 20px;       /* optional: side padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand a {
+font-size: 1.5rem;
+font-weight: 600;
+color: #333;
+text-decoration: none;
+}
+
+.main-nav ul {
+list-style: none;
+display: flex;
+}
+
+.main-nav li {
+margin-left: 20px;
+}
+
+.main-nav a {
+color: #333;
+text-decoration: none;
+font-weight: 400;
+}
+
+.nav-actions {
+display: flex;
+align-items: center;
+}
+
+.nav-actions .search input {
+padding: 8px 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.logo {
+    width: 120px;       /* Change size as you want */
+    height: 50px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    display: block;  /* Center the logo */
+}
+
+.nav-actions .cart {
+margin-left: 20px;
+text-decoration: none;
+color: #333;
+font-weight: 500;
+}
+
+.login{
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    text-decoration: none;
+}
+.login a {
+    color: #333;
+    text-decoration: none;
+}
+ details {
+            width: max-content;
+            position: relative;
+        }
+
+        summary {
+            list-style: none;
+            cursor: pointer;
+            font-size: 19px;
+            padding: 6px;
+            border-radius: 8px;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+
+        summary:hover {
+            background: #f0f0f0;
+        }
+
+        /* Barre de recherche POSÉE À GAUCHE */
+        details input {
+            position: absolute;
+            left: 240px;   /* décalage vers la gauche */
+            top: 0;
+            padding: 8px 12px;
+            width: 220px;
+            font-size: 15px;
+            border: 1px solid #bbb;
+            border-radius: 20px;
+            outline: none;
+            background: white;
+            display: none;
+            transition: 0.3s;
+        }
+
+        /* Quand le menu est ouvert */
+        details[open] input {
+            display: block;
+        }
+
+        /* Focus style */
+        input:focus {
+            border-color: #4d8eff;
+            box-shadow: 0 0 5px #4d8eff55;
+        }
+
+/* Hero */
+
+.hero {
+display: flex;
+align-items: center;
+padding: 60px 0;
+}
+
+.hero-content {
+flex: 1;
+}
+
+.hero-content h1 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+}
+
+.hero-content p {
+font-size: 1.1rem;
+margin-bottom: 30px;
+color: #666;
+}
+
+.hero-content .btn {
+padding: 12px 30px;
+background-color: #333;
+color: #fff;
+text-decoration: none;
+font-weight: 500;
+border-radius: 4px;
+}
+
+.hero-image {
+flex: 1;
+text-align: right;
+}
+
+.hero-image img {
+max-width: 100%;
+height: auto;
+}
+
+/* Banners */
+.banners {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin: 60px 0;
+}
+
+.banner {
+position: relative;
+overflow: hidden;
+}
+
+.banner img {
+display: block;
+width: 100%;
+height: auto;
+transition: transform .3s;
+}
+
+.banner:hover img {
+transform: scale(1.05);
+}
+
+.banner-content {
+position: absolute;
+bottom: 20px;
+left: 20px;
+color: #fff;
+}
+
+.banner-content h3 {
+font-size: 1.8rem;
+margin-bottom: 10px;
+}
+
+.banner-content .btn {
+padding: 10px 25px;
+background-color: #fff;
+color: #333;
+text-decoration: none;
+border-radius: 4px;
+}
+
+/* Products */
+.products {
+margin-bottom: 60px;
+}
+
+.products h2 {
+font-size: 2rem;
+margin-bottom: 30px;
+}
+
+.pro {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap: 30px;
+}
+
+.product {
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    transition: 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+.product img {
+max-width: 100%;
+height: auto;
+margin-bottom: 15px;
+}
+
+.product-title {
+font-size: 1.1rem;
+margin-bottom: 10px;
+color: #333;
+}
+
+.price {
+font-size: 1rem;
+font-weight: 600;
+margin-bottom: 15px;
+color: #555;
+}
+
+
+/* Add to cart button for links */
+.add-cart-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.add-cart-btn:hover {
+    background-color: #555;
+}
+
+/* Newsletter */
+.newsletter {
+background-color: #f5f5f5;
+padding: 50px 0;
+text-align: center;
+}
+
+.newsletter h3 {
+font-size: 1.8rem;
+margin-bottom: 20px;
+}
+
+.newsletter input[type="email"] {
+padding: 12px 18px;
+width: 40%;
+max-width: 400px;
+border: 1px solid #ccc;
+border-radius: 4px;
+margin-right: 10px;
+}
+
+.newsletter button {
+padding: 12px 25px;
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 4px;
+font-weight: 500;
+cursor: pointer;
+}
+
+.newsletter button:hover {
+background-color: #555;
+}
+
+/* Footer */
+.footer {
+padding: 60px 0 30px;
+}
+
+.footer-columns {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 40px;
+margin-bottom: 30px;
+}
+
+.footer-columns h4 {
+font-size: 1.2rem;
+margin-bottom: 15px;
+color: #333;
+}
+
+.footer-columns p,
+.footer-columns ul,
+.footer-columns li,
+.footer-columns a {
+color: #666;
+font-size: 0.9rem;
+}
+
+.footer-columns ul {
+list-style: none;
+}
+
+.footer-columns li {
+margin-bottom: 10px;
+}
+
+.footer-columns a {
+text-decoration: none;
+color: #666;
+}
+
+.footer-columns a:hover {
+color: #333;
+}
+
+.footer-bottom {
+text-align: center;
+font-size: 0.9rem;
+color: #999;
+}
+/* -------------------- Avatar -------------------- */
+/* Avatar container */
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Avatar image */
+.avatar-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #222;      /* Dark circle */
+    color: #fff;           /* White text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.avatar-circle:hover {
+    background: #000;
+}
+
+
+/* Dropdown */
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    display: none;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    min-width: 160px;
+    z-index: 1000;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.dropdown a:hover {
+    background: #f2f2f2;
+}

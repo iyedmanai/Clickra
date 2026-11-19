@@ -1,0 +1,14 @@
+<?php
+session_start();
+
+$id = $_POST['id'];
+$quantite = (int)$_POST['quantite'];
+
+if ($quantite <= 0) {
+    unset($_SESSION['panier'][$id]);
+} else {
+    $_SESSION['panier'][$id]['quantite'] = $quantite;
+}
+
+header("Location: panier.php");
+exit;

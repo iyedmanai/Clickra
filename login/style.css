@@ -1,0 +1,201 @@
+:root {
+    --container: 1100px;
+    --accent: #222;
+}
+
+/* -------------------- GLOBAL -------------------- */
+* {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    color: #111;
+    background: #f8f8f8;
+}
+
+/* -------------------- LAYOUT -------------------- */
+
+
+/* -------------------- LOGO -------------------- */
+
+
+/* -------------------- RIGHT TEXT AREA -------------------- */
+.nav-right-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.welcome {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.login-btn,
+.logout-btn {
+    text-decoration: none;
+    padding: 6px 12px;
+    background: #111;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* -------------------- AUTH PAGES -------------------- */
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 8px;
+    padding: 1.6rem;
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.auth-card h2 {
+    margin-top: 0;
+}
+
+.auth-card label {
+    display: block;
+    margin: 0.6rem 0;
+}
+
+.auth-card input,
+.auth-card select {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 1rem;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: #222;
+    color: #fff;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.muted {
+    color: #666;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.error {
+    color: #b00020;
+    background: #ffd8d8;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+/* -------------------- FOOTER -------------------- */
+.site-footer {
+    border-top: 1px solid #eee;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* -------------------- Admin DASHBOARD -------------------- */
+.dashboard-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.dashboard-box .btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px;
+    text-align: center;
+    background: #222;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dashboard-box .btn:hover {
+    background: #000;
+}
+
+/* Center dashboard on the page */
+.dashboard-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Ensure the box stays centered */
+.dashboard-box {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+/* -------------------- CLIENT DASHBOARD -------------------- */
+
+/* Wrapper centers the dashboard on the page */
+.dashboard-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Container of all client buttons */
+.dashboard-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 450px;   /* Centered like admin */
+    margin: 0 auto;
+}
+
+/* Buttons */
+.dashboard-box .btn {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    background: #222;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.dashboard-box .btn:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+/* -------------------- MOBILE -------------------- */
+@media (max-width: 700px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

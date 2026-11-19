@@ -1,0 +1,7 @@
+<?php
+session_start();
+require_once __DIR__ . '/../includes/db.php';
+if (empty($_SESSION['id']) || $_SESSION['role'] !== 'admin') { header('Location: /clickra/auth/login.php'); exit; }
+if(isset($_GET['delete'])) { $id = (int)$_GET['delete']; $stmt = $conn->prepare('DELETE FROM produit WHERE id_pdt = ?'); $stmt->execute([$id]); header('Location: produits.php'); exit; }
+$stmt = $conn->query('SELECT * FROM produit ORDER BY id_pdt DESC'); $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?><!doctype html><html lang="fr"><head><meta charset="utf-8"/><title>Produits</title><link rel="stylesheet" href="/clickra/style.css" /></head><body><?php include __DIR__ . '/../includes/header.php'; ?><main class="container"><h1>Produits</h1><a class="btn" href="ajouter_produit.php">Ajouter produit</a><table style="width:100%; margin-top:1rem; border-collapse:collapse;"><tr><th>ID</th><th>Nom</th><th>Prix</th><th>Quantité</th><th>Actions</th></tr><?php foreach($produits as $p): ?><tr style="border-top:1px solid #eee;"><td><?= $p['id_pdt'] ?></td><td><?= htmlspecialchars($p['nom_pdt']) ?></td><td><?= $p['prix'] ?> dt</td><td><?= $p['quantite'] ?></td><td><a href="modifier_produit.php?id=<?= $p['id_pdt'] ?>">Edit</a> | <a href="produits.php?delete=<?= $p['id_pdt'] ?>" onclick="return confirm('Supprimer?')">Delete</a></td></tr><?php endforeach; ?></table></main></body></html>

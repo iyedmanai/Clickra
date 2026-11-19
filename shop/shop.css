@@ -1,0 +1,317 @@
+/* Men Section Page */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f8f8;
+}
+html {
+font-family: 'Inter', sans-serif;
+line-height: 1.5;
+scroll-behavior: smooth;
+}
+
+.container {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f8f8f8;
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+    border-bottom: 1px solid #eaeaea;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-container {
+    max-width: 1200px;     /* same width as your main page */
+    margin: 0 auto;        /* centers the header content */
+    padding: 0 20px;       /* optional: side padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand a {
+font-size: 1.5rem;
+font-weight: 600;
+color: #333;
+text-decoration: none;
+}
+
+.main-nav ul {
+list-style: none;
+display: flex;
+}
+
+.main-nav li {
+margin-left: 20px;
+}
+
+.main-nav a {
+color: #333;
+text-decoration: none;
+font-weight: 400;
+}
+
+.nav-actions {
+display: flex;
+align-items: center;
+}
+
+.nav-actions .search input {
+padding: 8px 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.logo {
+    width: 120px;       /* Change size as you want */
+    height: 50px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    display: block;  /* Center the logo */
+}
+
+.nav-actions .cart {
+margin-left: 20px;
+text-decoration: none;
+color: #333;
+font-weight: 500;
+}
+
+.login{
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    text-decoration: none;
+}
+.login a {
+    color: #333;
+    text-decoration: none;
+}
+ details {
+            width: max-content;
+            position: relative;
+        }
+
+        summary {
+            list-style: none;
+            cursor: pointer;
+            font-size: 19px;
+            padding: 6px;
+            border-radius: 8px;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+
+        summary:hover {
+            background: #f0f0f0;
+        }
+
+        /* Barre de recherche POSÉE À GAUCHE */
+        details input {
+            position: absolute;
+            left: -240px;   /* décalage vers la gauche */
+            top: 0;
+            padding: 8px 12px;
+            width: 220px;
+            font-size: 15px;
+            border: 1px solid #bbb;
+            border-radius: 20px;
+            outline: none;
+            background: white;
+            display: none;
+            transition: 0.3s;
+        }
+
+        /* Quand le menu est ouvert */
+        details[open] input {
+            display: block;
+        }
+
+        /* Focus style */
+        input:focus {
+            border-color: #4d8eff;
+            box-shadow: 0 0 5px #4d8eff55;
+        }
+        
+
+/* Page Header */
+.men-page .page-header {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: 30px 70px 40px;
+}
+/* Product Grid */
+.product-grid {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding-bottom: 20px;
+    border: 1px solid #eee;
+    text-align:center;
+    box-shadow: 0 2px 10px #00000008;
+    transition: 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 18px #00000015;
+}
+
+.product-card img {
+    width:100%;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Badge */
+
+/* Title + Price */
+.product-title {
+    font-size: 15px;
+    margin-top:10px;
+    color:#333;
+}
+
+.product-price {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+.new-price {
+    color:#333;
+    font-weight:600;
+}
+
+.old-price {
+    color:#999;
+    text-decoration: line-through;
+    font-size: 13px;
+    margin-left: 6px;
+}
+.product-badge {
+    display:inline-block;
+    background:#676767;
+    color:white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin:10px auto;
+}
+/* FIXED Men Page Header – All on same line */
+.page-header {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    color: #999;
+}
+
+.breadcrumbs a {
+    color: #666;
+    text-decoration: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+/* Container global de l’en-tête de page */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px; /* s'aligne avec ta grille produits */
+    margin: 0 auto 20px auto; /* même marge que la grille */
+    padding: 0 90px; /* même padding que le site */
+}
+
+/* Partie gauche (breadcrumbs + titre) */
+.header-left h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Partie droite (Trier par) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* Pour bien coller la grille de produits */
+.product-grid {
+    max-width: 1300px;      /* la même valeur que .page-header */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.add-cart-btn {
+    display: block;
+    background: #222;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.add-cart-btn:hover {
+    background: #000;
+}
+
